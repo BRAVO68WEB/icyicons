@@ -1,0 +1,57 @@
+{
+  "name": "icyicons",
+  "displayName": "Icy Icons",
+  "description": "Crystalify all your VSCode Icons.",
+  "publisher": "Bravo68web",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "vscode": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bravo68web/icyicons"
+  },
+  "bugs": {
+    "url": "https://github.com/bravo68web/icyicons/issues",
+    "email": "bravo68web@gmail.com"
+  },
+  "homepage": "https://github.com/bravo68web/icyicons",
+  "keywords": [
+    "icyicons",
+    "uniform",
+    "icons"
+  ],
+  "icon": "icon.png",
+  "categories": [
+    "Other",
+    "Themes"
+  ],
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "icyicons",
+        "label": "Icy Icons",
+        "path": "./icons.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.59.0",
+    "node": "^15.12.0",
+    "nodemon": "^2.0.7",
+    "vscode-test": "^1.5.2"
+  },
+  "scripts": {
+    "build": "node ./src/main.js",
+    "build:ext": "vsce package --no-yarn",
+    "watch": "nodemon -L ./src/main.js",
+    "start": "run-p  lint watch",
+    "test": "node ./out/test/runTest.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "npm-run-all": "^4.1.5",
+    "vsce": "^2.3.0"
+  }
+}
